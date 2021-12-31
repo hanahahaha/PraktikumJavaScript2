@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kurs Rupiah</title>
+    <style>
+      body {
+        padding: 4em;
+      }
+    </style>
+  </head>
+  <body>
+    <fieldset>
+      <legend>Kurs Rupiah - Mata Uang Asing</legend>
+      <th>Masukkan Nilai :</th>
+      <input type="text" placeholder="Masukkan Nilai" id="number" />
+      <th>Valas :</th>
+      <select name="" id="choice" onchange="valas()">
+        <option value="Dollar US">Dollar US</option>
+        <option value="Dollar Singapore">Dollar Singapore</option>
+        <option value="Ringgit Malaysia">Ringgit Malaysia</option>
+        <option value="Yen Jepang">Yen Jepang</option>
+        <option value="Euro">Euro</option>
+        <option value="Riyal Arab Saudi">Riyal Arab Saudi</option>
+      </select>
+      <th>Nilai Rupiah :</th>
+      <input type="text" placeholder="Nilai Rupiah" id="hasil" />
+    </fieldset>
+    <script>
+      function valas() {
+        let number = document.getElementById("number").value;
+        let choice = document.getElementById("choice").value;
+        if (choice == "Dollar US") {
+          let x = number * 9915;
+          document.getElementById("hasil").value = x;
+        } else if (choice == "Dollar Singapore") {
+          let x = number * 13472;
+          document.getElementById("hasil").value = x;
+        } else if (choice == "Ringgit Malaysia") {
+          let x = number * 874;
+          document.getElementById("hasil").value = x;
+        } else if (choice == "Yen Jepang") {
+          let x = number * 120;
+          document.getElementById("hasil").value = x;
+        } else if (choice == "Euro") {
+          let x = number * 15888;
+          document.getElementById("hasil").value = x;
+        } else {
+          let x = number * 3592;
+          document.getElementById("hasil").value = x;
+        }
+      }
+    </script>
+  </body>
+</html>
